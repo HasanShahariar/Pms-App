@@ -1,0 +1,25 @@
+<div class="container mt-4">
+  <h2>Parking Records</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Owner Name</th>
+        <th>Vehicle Type</th>
+        <th>License Number</th>
+        <th>Entry Time</th>
+        <th>Exit Time</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let record of parkingRecords">
+        <td>{{ record.ownerName }}</td>
+        <td>{{ record.vehicleType }}</td>
+        <td>{{ record.licenseNumber }}</td>
+        <td>{{ record.entryTime | date: 'short' }}</td>
+        <td>{{ record.exitTime | date: 'short' }}</td>
+        <td>{{ record.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

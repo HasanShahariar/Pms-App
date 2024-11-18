@@ -37,6 +37,8 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/alertifyjs/build/css/alertify.min.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
             "scripts": [],
@@ -102,6 +104,8 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/alertifyjs/build/css/alertify.min.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -109,5 +113,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "af60f853-02fa-45fc-8b23-2dc99aabb02d"
   }
 }
