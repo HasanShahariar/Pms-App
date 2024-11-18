@@ -33,8 +33,10 @@ export class ParkingService {
     return this.http.put(`${this.apiUrl}Parking/update/${id}`, entry);
   }
 
-  getDashboardData(): Observable<any> {
-    return this.http.get(`${this.apiUrl}Parking/GetDashboardData`);
+ 
+
+  getParkingByInfoId(id: number): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}Parking/GetParkingInfoById?id=${id}`);
   }
 
 }

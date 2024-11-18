@@ -37,11 +37,12 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/alertifyjs/build/css/alertify.min.css",
+          
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/@ng-select/ng-select/themes/default.theme.css",
               "src/styles.scss"
             ],
-            "scripts": [],
+            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
@@ -104,11 +105,12 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/alertifyjs/build/css/alertify.min.css",
+             
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/@ng-select/ng-select/themes/default.theme.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"]
           }
         }
       }

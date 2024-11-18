@@ -1,5 +1,11 @@
 <div class="container mt-4">
-  <h2>Parking Records</h2>
+  <div class="d-flex justify-content-between">
+    <h2>Parking Records</h2>
+    <div class="d-flex gap-2">
+      <div class="btn-goto" (click)="goToDashboard()">Go To Dashboard</div>
+      <div class="btn-goto" (click)="goToEntry()">Go To Entry</div>
+    </div>
+  </div>
   <table class="table table-striped">
     <thead>
       <tr>
@@ -9,6 +15,7 @@
         <th>Entry Time</th>
         <th>Exit Time</th>
         <th>Status</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
@@ -19,6 +26,7 @@
         <td>{{ record.entryTime | date: 'short' }}</td>
         <td>{{ record.exitTime | date: 'short' }}</td>
         <td>{{ record.status }}</td>
+        <td><a class="edit-btn" (click)="editEntry(record.id)"><i class="fa-solid fa-pen-to-square"></i></a></td>
       </tr>
     </tbody>
   </table>

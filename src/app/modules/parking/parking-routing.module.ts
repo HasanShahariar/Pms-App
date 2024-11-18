@@ -9,6 +9,10 @@ const routes: Routes = [
     component:ParkingEntryComponent
   },
   {
+    path:'info/edit/:id',
+    component:ParkingEntryComponent
+  },
+  {
     path:'list',
     component:ParkingListComponent
   },

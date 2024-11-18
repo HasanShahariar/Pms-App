@@ -1,0 +1,69 @@
+<section class="relative">
+  <a class="btn-goto" (click)="goToEntryRecords()">Go To Entry Records   <i class="fa-solid fa-arrow-right"></i></a>
+  <div class="container">
+    <h1>Parking Management Dashboard</h1>
+    <form [formGroup]="filterForm">
+      <div class="date-filter">
+        <label for="date">Filter by date: </label>
+        <input class="form-control" type="date" formControlName="date"  />
+        <a class="btn btn-secondary" (click)="getDashboardData()"><i class="fa-solid fa-rotate"></i></a>
+      </div>
+    </form>
+    
+
+    <div class="dashboard">
+      <div class="card">
+        <h2>Total Cars Parked</h2>
+        <p>{{dashBoardData?.totalCarsParked}}</p>
+      </div>
+      <div class="card">
+        <h2>Total Empty Slots</h2>
+        <p>{{dashBoardData?.emptySlots}}</p>
+      </div>
+      <div class="card">
+        <h2>Vehicles Over 2 Hours</h2>
+        <p>{{dashBoardData?.vehiclesOverTwoHours}}</p>
+      </div>
+      <div class="card">
+        <h2 class="mb-3">Vehicle Type Info</h2>
+        <div class="d-flex gap-2 vehicle-type-info flex-column">
+          <div *ngFor="let info of dashBoardData?.vehicleTypeInfo" clas>
+            <p>{{info.vehicleType}}</p>
+            <p>{{info.count}}</p>
+            
+            </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="">
+          <h3>Pie Chart: Vehicle Types</h3>
+          <canvas id="pieChart"></canvas>
+        </div>
+      </div>
+    
+    
+    </div>
+
+    <!-- Charts -->
+    <div class="dashboard">
+      <div class="chart">
+       
+          
+      
+          <!-- Line Chart: Weekly Parking Trends -->
+          <div class="w-100">
+            <h3>Line Chart: Vehicle Parked</h3>
+            <div class="d-flex gap-2">
+              <button class="btn btn-secondary" (click)="updateChart('daily')">Daily</button>
+              <button class="btn btn-secondary" (click)="updateChart('weekly')">Weekly</button>
+              <button class="btn btn-secondary" (click)="updateChart('monthly')">Monthly</button>
+            </div>
+            <canvas id="lineChart"></canvas>
+          </div>
+   
+      </div>
+    
+    </div>
+  </div>
+</section>
