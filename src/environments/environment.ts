@@ -1,5 +1,5 @@
 export const environment = {
 
     // apiUrl: 'https://localhost:7083/api/',
-    apiUrl: 'http://pms.runasp.net/api/',
+    apiUrl: 'https://pms.runasp.net/api/',
 }
